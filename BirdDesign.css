@@ -1,0 +1,85 @@
+/*
+changes the backgound colour of the webpage
+*/
+#pageColour {
+   background-color:rgb(11, 25, 16);
+   margin:0px 0px 0px 0px;
+   padding:10px;
+   margin:0;"
+}
+
+/*
+changes the properties of the heading/title
+*/
+#titlePropertiesHead {
+   font-size:300%; 
+   text-align:center; 
+   color:rgb(211, 255, 126);
+}
+
+/*
+changes the properties of the discliaimer
+*/
+#titlePropertiesFINEPRINT {
+   font-size:75%;
+   text-align:center;
+   color:powderblue;
+}
+
+
+/*
+changes the properties of the table , table headings and table data tags
+*/
+table, th, td {
+   border: 5px solid rgb(96, 34, 0);
+   border-collapse: collapse;
+}
+th, td {
+   text-align: center;
+   padding: 10px;
+}
+
+
+/*
+changes the colour of the table
+*/
+#tableColor {
+   color:rgb(11, 25, 16);
+}
+
+
+/*
+changes the colour of the font of the table
+*/
+#tablefont {
+   color:rgb(211, 255, 126);
+}
+
+
+/*
+changes the properties of the project description
+*/
+#description {
+   color: powderblue;
+   text-align: center;
+}
+
+
+/*
+changes the properties of the buttons
+*/
+#button {
+   margin: 0;
+   width: 50%;
+   display: inline;  
+}
+
+
+/*
+changes the properties of the page numbers
+*/
+#pageNumber {
+   color: powderblue;
+}
+
+
