@@ -1,0 +1,228 @@
+#navbarWHOLE {
+  background-color:rgb(96, 34, 0);
+  list-style-type:none;
+  margin:0px 0px 0px 0px;
+  overflow:hidden;
+}
+
+li a {
+  float: left;
+  color:white;
+  text-decoration:none;
+  font-family:arial;
+  padding-top: 25px;
+  padding-left:25px;
+  padding-bottom:25px;
+  padding-right:25px;
+  border-radius: 75px;
+  margin:0px 0px 0px 0px;
+}
+
+li a:hover {
+  background-color:rgb(150, 255, 100);
+}
+
+
+.description{
+  float:left;
+  background-color:rgb(211, 255, 126);
+  background-repeat: no-repeat;
+  margin:0px 0px 0px 0px;
+  
+}
+
+.descriptionHead{
+  height:50%; 
+  width:65%;
+  text-align:center;
+  padding: 50px 10px 10px 10px;
+  font: Courier;
+  color: rgb(96, 34, 0);
+  margin:0px 0px 0px 0px;
+}
+
+.descriptionPara{
+  height:50%; 
+  width:65%;
+  padding: 10px 10px 5px 10px;
+  font: arial;
+  margin:0px 0px 0px 0px;
+}
+
+
+.nesting{
+  float: right;
+  background-color:rgb(11, 25, 16);
+  background-repeat: no-repeat;
+  margin:0px 0px 0px 0px;
+  
+}
+
+.nestingHead{
+  float: right;
+  width:65%;
+  text-align:center;
+  padding: 50px 10px 10px 10px;
+  font: Courier;
+  color:powderblue;
+  margin:0px 0px 0px 0px;
+}
+
+.nestingPara{
+  float: right;
+  width:65%;
+  padding: 10px 10px 5px 10px;
+  font: arial;
+  color:powderblue;
+  margin:0px 0px 0px 0px;
+}
+
+
+.hunting{
+  float: left;
+  padding: 10px 10px 10px 10px;
+  background-image:url("owl5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin:0px 0px 0px 0px;
+  
+}
+
+.huntingHead{
+  width:100%;
+  text-align:center;
+  padding-top: 50px;
+  padding: 50px,10px,10px,10px;
+  font: Courier;
+  color:white;
+  margin:0px 0px 0px 0px;
+}
+
+.huntingPara{
+  text-align:center;
+  width:100%;
+  padding: 10px 10px 5px 10px;
+  padding-top: 50px;
+  padding-bottom:350px;
+  font: arial;
+  color:white;
+  margin:0px 0px 0px 0px;
+}
+
+
+
+.Icon{
+  float:left;
+  background-color:rgb(211, 255, 126);
+  background-repeat: no-repeat;
+  margin:0px 0px 0px 0px;
+  
+}
+
+.IconHead{
+  float:right;
+  width:65%;
+  text-align:center;
+  padding: 50px 10px 10px 10px;
+  font: Courier;
+  color:  rgb(96, 34, 0);
+  margin:0px 0px 0px 0px;
+}
+
+.IconPara{
+  float:right;
+  width:65%;
+  padding: 10px 10px 5px 10px;
+  font: arial;
+  margin:0px 0px 0px 0px;
+}
+
+
+.Citation{
+  float:left;
+  background-color:powderblue;
+  background-repeat: no-repeat;
+  margin:0px 0px 0px 0px;
+  
+}
+
+.normal{
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  list-style-type: none;
+  float: left;
+  font: arial;
+  margin:0px 0px 0px 0px;
+}
+
+
+
+.habitat{
+  float: left;
+  background-color:rgb(11, 25, 16);
+  background-repeat: no-repeat;
+  margin:0px 0px 0px 0px;
+  
+}
+
+.habitatHead{
+  float: left;
+  width:65%;
+  text-align:center;
+  padding: 50px 10px 10px 10px;
+  font: Courier;
+  color:white;
+  margin:0px 0px 0px 0px;
+}
+
+.habitatPara{
+  float: left;
+  width:65%;
+  padding: 10px 10px 5px 10px;
+  font: arial;
+  color:white;
+  margin:0px 0px 0px 0px;
+}
+
+
+.longevity{
+  padding:50px 50px 75px 50px;
+  background-image:url("owl6.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  margin:0px 0px 0px 0px;
+  
+}
+
+.longevityHead{
+  width:100%;
+  text-align:center;
+  padding-top: 50px;
+  padding: 50px 10px 10px 10px;
+  font: Courier;
+  color:rgb(211, 255, 126);
+  margin:0px 0px 0px 0px;
+}
+
+.longevityPara{
+  width:100%;
+  text-align:center;
+  padding: 50px 10px 100px 10px;
+  font: arial;
+  color:rgb(211, 255, 126);
+  margin:0px 0px 0px 0px;
+}
+
+
+
+
+.vid{
+  float: left;
+  text-align:center;
+  width:100%;
+  background-color:rgb(211, 255, 126);
+  background-repeat: no-repeat;
+  margin:0px 0px 0px 0px;
+  
+}
+
