@@ -64,6 +64,17 @@ changes the properties of the project description
    text-align: center;
 }
 
+#textsAndWords1 {
+   color: powderblue;
+   padding: 20px;
+}
+
+
+#textsAndWords2 {
+   color: powderblue;
+   text-align: center;
+   font-weight: bold;
+}
 
 /*
 changes the properties of the buttons

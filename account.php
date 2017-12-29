@@ -1,18 +1,26 @@
 <?php 
   session_start();
 ?>
-
 <DOCTYPE! HTML>
 <html>
     <head>
 	    <title>LOG IN and SIGN UP</title>
+        <!-- Calls the CSS files we need for our program-->
+        <link rel="stylesheet" href="BirdDesign.css">
+
     </head>
-	<body>
+	<body id="pageColour">
 	
-	   <?php
-            //user account session variables	   
-		    $_SESSION["username"] = "";
-			$_SESSION["password"] = "";
+	          <!--     To Fill up top gap with colour before title      -->
+              <p id = "titlePropertiesHead"><b>BirdWatch</b></p>
+
+
+              <!--Horizontal Line-->
+              <p>        </p>
+              <hr>    
+
+	
+	   <?php	
 	   
 	   
 	        //set up the database
@@ -30,11 +38,11 @@
 			
 			if ( $UserConn -> query($accountBase) == TRUE  ) {
 				
-				echo "USER DATABASE CREATED" ;
+				//echo "USER DATABASE CREATED" ;
 				
 			} else {
 				
-				echo "ERROR IN ACCOUNT CREATION" . $UserConn->error;
+				echo "<div id=\"textsAndWords2\">ERROR IN ACCOUNT CREATION" . $UserConn->error . "</div>";
 				
 			}
 
@@ -58,11 +66,11 @@
 			
 			if ( $UserConn -> query($accountTable) == TRUE  ) {
 				
-				echo "USER DATABASE CREATED" ;
+				//echo "USER DATABASE CREATED" ;
 				
 			} else {
 				
-				echo "ERROR IN ACCOUNT CREATION" . $UserConn->error;
+				echo "<div id=\"textsAndWords2\">ERROR IN ACCOUNT CREATION" . $UserConn->error ."</div>";
 				
 			}
 			
@@ -75,7 +83,7 @@
 				
                 if ( $_POST["UserName"] == "" && $_POST["newUserName"] == "" ) {
 					
-					echo "ERROR IN ACCOUNT CREATION: NO DATA RECIEVED";
+					echo "<div id=\"textsAndWords2\">ERROR IN ACCOUNT CREATION: NO DATA RECIEVED</div>";
 					
 				} else if ($_POST["UserName"] == "") { //new user
 					
@@ -85,13 +93,13 @@
 
 					if ( $Password == "" ) {
 						
-						echo "PASSWORD MUST NOT BE EMPTY";
+						echo "<div id=\"textsAndWords2\">PASSWORD MUST NOT BE EMPTY</div>";
 						
 					}
 					
                     if ( $Password != $Confirm ) {
 						
-						echo "PASSWORD DOES NOT MATCH CONFIRM WORD";
+						echo "<div id=\"textsAndWords2\">PASSWORD DOES NOT MATCH CONFIRM WORD</div>";
 						
 					}
 					
@@ -107,11 +115,11 @@
 						while ( $row = $retrieveQuery->fetch_assoc() ){
 							if ( $Username == $row["UserN"]){
 								$found = true;
-								echo "Username is already taken, please try again";
+								echo "<div id=\"textsAndWords2\">Username is already taken, please try again</div>";
 							}
 						}
 						if ($found == false) {
-							echo " CREATING USER ...";
+							echo "<div id=\"textsAndWords2\"> CREATING USER ... </div>";
 		
     					    $UserData = $UserConn -> prepare ( "INSERT INTO accountTable(UserN, PassW) VALUES ( ?, ? )" );
     	    				$UserData -> bind_param("ss", $DBuser, $DBpass);
@@ -123,12 +131,12 @@
 				            $_SESSION["username"] = $Username;
 				            $_SESSION["password"] = $Password;
                           
-						    echo "User created, CLOSE BROWSER TO LOG OUT";
+						    echo "<div id=\"textsAndWords2\"> User created </div>";
       					}
 						
 					} else {
 						
-						echo " CREATING USER ...";
+						echo "<div id=\"textsAndWords2\"> CREATING USER ... </div>";
 						
    					    $UserData = $UserConn -> prepare ( "INSERT INTO accountTable(UserN, PassW) VALUES ( ?, ? )" );
         				$UserData -> bind_param("ss", $DBuser, $DBpass);
@@ -140,7 +148,7 @@
 				        $_SESSION["username"] = $Username;
 				        $_SESSION["password"] = $Password;
                           
-						echo "User created, CLOSE BROWSER TO LOG OUT";
+						echo "<div id=\"textsAndWords2\"> User created </div>";
 						
 					}
 					
@@ -152,7 +160,7 @@
 					
 					if ( $Password == "" ) {
 						
-						echo "PASSWORD MUST NOT BE EMPTY";
+						echo "<div id=\"textsAndWords2\"> PASSWORD MUST NOT BE EMPTY </div>";
 						
 					}
 					
@@ -169,7 +177,7 @@
 						while ( $row = $retrieveQuery->fetch_assoc() ){
 							if ( $Username == $row["UserN"]){
 								$found = true;
-								echo "User found ... LOGGIN IN, CLOSE BROWSER TO LOG OUT";
+								echo "<div id=\"textsAndWords2\"> User found ... LOGGIN IN </div>";
 								
 					            $_SESSION["username"] = $Username;
 					            $_SESSION["password"] = $Password;
@@ -178,12 +186,12 @@
 							}
 						}
 						if ($found == false) {
-							echo "no user found";
+							echo "<div id=\"textsAndWords2\"> no user found </div>";
 						}
 						
 					} else {
 						
-						echo "no records found";
+						echo "<div id=\"textsAndWords2\"> no records found </div>";
 						
 					}
 					
@@ -191,7 +199,7 @@
 				} else {
 					
 					
-					echo "ERROR IN ACCOUNT CREATION: SEND ONLY ONE FORM PLEASE";
+					echo "<div id=\"textsAndWords2\"> ERROR IN ACCOUNT CREATION: SEND ONLY ONE FORM PLEASE </div>";
 										
 				}
 				
@@ -201,11 +209,40 @@
 			
 	   ?>
 	
-	
-	    <b> New User? Sign up here: </b>
+
+	    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+			  
+             <table   id="textsAndWords1" align="center" >
+			     <tr> <td colspan="3"><b> New User? Sign up here: </b></td> </tr>
+				 <tr> <td>Username:<br/><input type="text" name="newUserName" ></td>  <td>Password:<br/><input type="password" name="newPassWord" ></td>  <td>Confirm Password:<br/><input type="password" name="confirmWord" ></td> </tr>
+		         <tr> <td colspan="3"> <input type="submit" value="submit"> </td> </tr>
+			 </table>
+			 <br />
+             <table   id="textsAndWords1" align="center" >
+			     <tr> <td colspan="2"><b> Already a memeber? Login here: </b></td> </tr>
+				 <tr> <td>Username:<br/><input type="text" name="UserName" ></td>  <td>Password:<br/><input type="password" name="PassWord" ></td> </tr>
+		         <tr> <td colspan="2"> <input type="submit" value="submit"> </td> </tr>
+			 </table>			 
+		</form>
+	    
+		<?php
+		if (isset($_SESSION["username"]) && $_SESSION["username"] != "") {
+		        echo "<form method=\"post\" action=\"logout.php\">";
+                echo "<table   id=\"textsAndWords1\" align=\"center\" >";
+			    echo "<tr> <td> <b> LOG OUT HERE: </b></td> </tr>";
+				echo "<tr> <td> <input type=\"submit\" name=\"logout\" value=\"logout\"> </td> </tr>"; 
+			    echo "</table>";
+		        echo "</form>";
+		}
+		?>
 		
-		<form  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-		    Username: <input type="text" name="newUserName" >
+		<!--
+		<form id="textsAndWords2" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+	        <b> New User? Sign up here: </b>
+			<br />
+			<br />
+
+     		Username: <input type="text" name="newUserName" >
 			
 			Password: <input type="password" name="newPassWord" >
 			
@@ -218,6 +255,7 @@
 		
 		    <b> Already a memeber? Login here:</b>
 			<br />
+			<br />
 		
 		    Username: <input type="text" name="UserName" >
 			
@@ -225,7 +263,13 @@
 			
 			<input type="submit" value="submit">
 		</form>
+		-->
 		
-		<a href="index.php">RETURN TO BirdWatch</a>
+		<hr />
+		
+		<a href="index.php" style="text-decoration:none; color:powderblue; font-size:15px;" >RETURN TO BirdWatch</a>
+
+        
+		
 	</body>
 </html>
